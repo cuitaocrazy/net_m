@@ -4,6 +4,15 @@ import { createStore } from 'redux'
 import { createAction, createReducer } from 'redux-act'
 import { Provider, connect } from 'react-redux'
 
+import socket from 'socket.io-client'
+
+const ls = socket('http://localhost:8081')
+
+ls.on('news', data => {
+  console.log(data)
+  ls.emit('test', "hello")
+})
+
 const container = document.createElement('div')
 
 document.body.appendChild(container)
