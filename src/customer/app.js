@@ -7,7 +7,7 @@ import SelfInfo from './SelfInfo'
 
 import socket from 'socket.io-client'
 
-const ls = socket('http://localhost:8081')
+const ls = socket('http://10.2.53.8:7070')
 
 ls.on('refresh', data => store.dispatch(newDataAct(data)))
 ls.on('ip', ip => store.dispatch(ipAct(ip)))
@@ -74,7 +74,7 @@ const reducer = createReducer({
     selfInfo.totalDownload = unitConvert(evt.reduce((total, e) => total + e[2], 0))
     return { ...state, selfInfo }
   },
-  [ipAct]: (state, evt) => ({ ...state, selfIp: '10.2.53.26' })
+  [ipAct]: (state, evt) => ({ ...state, selfIp: evt })
 }, { selfIp: '未连接', ipInfoList: [] })
 
 const store = createStore(reducer)
