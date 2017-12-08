@@ -1,10 +1,11 @@
 const path = require('path')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: './src/customer/app.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve('./', 'dist')
+    path: path.resolve('./')
   },
   module: {
     rules: [
@@ -16,5 +17,8 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins:[
+    new UglifyJsPlugin()
+  ]
 }

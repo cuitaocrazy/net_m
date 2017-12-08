@@ -36,7 +36,8 @@ async function work() {
       as.push(eval(result[1]))
     }
     evtEmt.emit('data', as)
-  }, 5000)
+    
+  }, 1000)
 }
 
 work()

@@ -35,6 +35,7 @@ let routeData = []
 
 evtEmt.addListener('data', data => {
   routeData = data.map(row => [row[0], row[2], covertToByte(row[2]), row[6], row[8], row[9], row[15], row[16]])
+  io.emit('refresh', routeData)
 })
 
 const app = express()
@@ -49,8 +50,10 @@ app.get('/test', (req, res) => {
   res.send(routeData)
 })
 
+app.use(express.static('./'))
+
 io.on('connection', socket => {
   socket.emit('ip', socket.handshake.address)
   socket.emit('refresh', routeData)
 })
-server.listen(8081)
+server.listen(7070)
