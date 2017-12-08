@@ -56,4 +56,10 @@ io.on('connection', socket => {
   socket.emit('ip', socket.handshake.address)
   socket.emit('refresh', routeData)
 })
-server.listen(7070)
+server.listen(7070, err => {
+  if(err) {
+    console.error(err)
+  } else {
+    console.log('start!!')
+  }
+})
