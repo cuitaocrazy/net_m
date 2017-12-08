@@ -1,5 +1,6 @@
 const path = require('path')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
   entry: './src/customer/app.js',
@@ -19,6 +20,10 @@ module.exports = {
     ]
   },
   plugins:[
-    new UglifyJsPlugin()
+    new UglifyJsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"production"',
+      'process.env.BROWSER': true,
+    })
   ]
 }
