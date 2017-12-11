@@ -63,7 +63,8 @@ const reducer = createReducer({
     selfInfo.totalUdpConnectionCount = getTotal(7)
 
     selfInfo.totalDownload = evt.reduce((total, e) => total + e[2], 0)
-    return { ...state, selfInfo, downloadTop: getTopData(2), downSpeedTop: getTopData(4), upSpeedTop: getTopData(3), connectionCountTop: getTopData(5), tcpConnectionCountTop: getTopData(6), udpConnectionCountTop: getTopData(7) }
+    return state
+    // return { ...state, selfInfo, downloadTop: getTopData(2), downSpeedTop: getTopData(4), upSpeedTop: getTopData(3), connectionCountTop: getTopData(5), tcpConnectionCountTop: getTopData(6), udpConnectionCountTop: getTopData(7) }
   },
   [ipAct]: (state, evt) => ({ ...state, selfIp: evt })
 }, { selfIp: '未连接', ipInfoList: [] })

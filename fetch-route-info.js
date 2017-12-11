@@ -50,7 +50,6 @@ async function work() {
       as.push(ipInfo)
     }
     evtEmt.emit('data', as)
-    console.log(as)
     
   }, 1000)
 }

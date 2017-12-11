@@ -40,6 +40,7 @@ export default connect(state => state.selfInfo || defVal)(props => {
       hoverBackgroundColor
     }]
   })
+  console.log(props)
   return <div>
     <span key='td'>总下载量: {unitConvert(props.totalDownload)}</span><br />
     <span key='d'>本机下载量: {unitConvert(props.download)}</span><br />

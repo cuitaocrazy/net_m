@@ -35,6 +35,7 @@ let routeData = []
 
 evtEmt.addListener('data', data => {
   routeData = data.map(row => [row[0], row[2], covertToByte(row[2]), row[6], row[8], row[9], row[15], row[16], row[18]])
+  console.log(routeData)
   io.emit('refresh', routeData)
 })
 

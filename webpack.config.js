@@ -21,11 +21,11 @@ module.exports = {
     ]
   },
   plugins:[
-    new UglifyJsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"production"',
-      'process.env.BROWSER': true,
-    }),
+    // new UglifyJsPlugin(),
+    // new webpack.DefinePlugin({
+    //   'process.env.NODE_ENV': '"production"',
+    //   'process.env.BROWSER': true,
+    // }),
     new HtmlWebpackPlugin({
       title: 'Monitor',
       template: 'template.html'
