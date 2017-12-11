@@ -12,12 +12,12 @@ export default (title, countTitle, key, numFormat = num => num) => connect(state
     '#00a6f9'
   ]
   const hoverBackgroundColor = [
-    '#ff0000',
-    '#ff00cc',
-    '#ff9d02',
-    '#ffff01',
-    '#ccff99',
-    '#00a6f9'
+    '#962b22',
+    '#a06b72',
+    '#a17903',
+    '#989914',
+    '##82a362',
+    '#006a9f'
   ]
 
   const labels = props.tops.map(row => row.ip)
