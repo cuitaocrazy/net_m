@@ -19,34 +19,64 @@ async function login() {
   return body.match(regex)[1]
 }
 
+async function getIplist(sessionid) {
+  const res = await fetch('http://10.2.53.1/dhcpd_client_list.asp', {
+    headers: {
+      'Cookie': 'JSESSIONID=' + sessionid
+    }
+  })
+
+  const text = await res.text()
+
+  const ipHostRegx = /'(.*?);(.*?);(.*?);/g
+  let result
+  
+  const ipList = {}
+
+  while((result = ipHostRegx.exec(text)) != null) {
+    ipList[result[2]] = [result[1], result[3].trim()]
+  }
+
+  return ipList
+}
 async function work() {
   const sessionid = await login()
   
   setInterval(async () => {
+    const ipList = await getIplist(sessionid)
+
+    let result
     const logRes = await fetch('http://10.2.53.1/ip_statistics.asp?sort_turn=0&sort_item=1&max_row=1', {
       headers: {
         'Cookie': 'JSESSIONID=' + sessionid
       }
     })
     const text = await logRes.text()
-    let result
 
-    const contentRegx = /var arp_list=new Array\(([\s\S]*?)\);/m
-    const content = text.match(contentRegx)[1]
+    // const contentRegx = /var arp_list=new Array\(([\s\S]*?)\);/m
+    // const content = text.match(contentRegx)[1]
     
-    const ipMacRegx = /"(.*?);(.*?);/g
+    // const ipMacRegx = /"(.*?);(.*?);/g
     
-    const ipMacMap = {}
+    // const ipMacMap = {}
     
-    while((result = ipMacRegx.exec(content)) != null) {
-      ipMacMap[result[1]] = result[2]
-    }
+    // while((result = ipMacRegx.exec(content)) != null) {
+    //   ipMacMap[result[1]] = result[2]
+    // }
 
+    console.log(ipList)
     const ipInfoRegx = /[^/]ip_stat\[\d+\]=(\[.*?\]);/g
     const as = []
     while((result = ipInfoRegx.exec(text)) != null) {
       const ipInfo = eval(result[1])
-      ipInfo.push(ipMacMap[ipInfo[0]] || '未知')
+      if(!ipList[ipInfo[0]]) {
+        ipInfo.push('未知')
+        ipInfo.push('未知')
+      } else {
+        ipInfo.push(ipList[ipInfo[0]][0])
+        ipInfo.push(ipList[ipInfo[0]][1])
+      }
+      
       as.push(ipInfo)
     }
     evtEmt.emit('data', as)

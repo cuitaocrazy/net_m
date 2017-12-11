@@ -4,20 +4,20 @@ import { Doughnut } from 'react-chartjs-2'
 
 export default (title, countTitle, key, numFormat = num => num) => connect(state => state[key] || {tops:[], otherCount: 0})(props => {
   const backgroundColor = [
-    '#E54B35',
-    '#36A2EB',
-    '#FFCE56',
-    '#9abe1f',
-    '#f4d000',
-    '#01b2bc'
+    '#ff0000',
+    '#ff00cc',
+    '#ff9d02',
+    '#ffff01',
+    '#ccff99',
+    '#00a6f9'
   ]
   const hoverBackgroundColor = [
-    '#E54B35',
-    '#36A2EB',
-    '#FFCE56',
-    '#9abe1f',
-    '#f4d000',
-    '#01b2bc'
+    '#ff0000',
+    '#ff00cc',
+    '#ff9d02',
+    '#ffff01',
+    '#ccff99',
+    '#00a6f9'
   ]
 
   const labels = props.tops.map(row => row.ip)
@@ -36,7 +36,7 @@ export default (title, countTitle, key, numFormat = num => num) => connect(state
           </tr>
         </thead>
         <tbody>
-          {props.tops.map((row, index) => <tr key={index}><td>{row.ip}<br /><small className='text-muted'>{row.mac}</small></td><td>{numFormat(row.count)}</td></tr>)}
+          {props.tops.map((row, index) => <tr key={index}><td>{row.ip}<br /><small className='text-muted'>{row.mac}</small><br /><small className='text-muted'>{row.hostName}</small></td><td>{numFormat(row.count)}</td></tr>)}
         </tbody>
       </table>
       <Doughnut data={{

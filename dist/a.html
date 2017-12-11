@@ -1,0 +1,205 @@
+
+<HTML><HEAD>
+  <META NAME=Copyright CONTENT="Copyright (c) 2009 H3C Corporation. All Rights Reserved.">
+  <META http-equiv=Content-Type content="text/html; charset=gb2312">
+  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  <TITLE>DHCPD CLIENT LIST</TITLE>
+  <LINK href="globe.css" type=text/css rel="stylesheet">
+  <SCRIPT language=JavaScript src=icg_utils.js></SCRIPT>
+  <SCRIPT language=JavaScript src=icg_listContrlButton.js></SCRIPT>
+  <script>
+  
+  var dhcpd_client_list=new Array(
+  '8C:A6:DF:10:99:19;10.2.53.10;TL-H69RD   ;lan1',
+  '88:25:93:4A:6A:6A;10.2.53.11;TL-WDR5600   ;lan1',
+  '00:0E:A9:31:3C:E1;10.2.53.12;MX8-VoIP-AG   ;lan1',
+  '00:0E:A9:31:2D:60;10.2.53.13;MX8-VoIP-AG   ;lan1',
+  '34:7C:25:79:4D:6D;10.2.53.14;GUO   ;lan1',
+  '44:37:E6:8B:D8:63;10.2.53.15;XTZ-01707311339   ;lan1',
+  '20:C9:D0:44:24:43;10.2.53.16;MacBook-Pro   ;lan1',
+  'B0:E2:35:C5:47:61;10.2.53.17;MI5-xiaomishouj   ;lan1',
+  '78:4F:43:94:C5:D7;10.2.53.19;zhangqiongdeMBP   ;lan1',
+  'B0:89:00:34:F2:F4;10.2.53.20;HUAWEI_BTV   ;lan1',
+  'FC:64:BA:58:07:CC;10.2.53.21;Mi-4c-xiaomisho   ;lan1',
+  'E4:A7:A0:38:30:C9;10.2.53.22;csj-T5   ;lan1',
+  'CC:2D:B7:55:22:D2;10.2.53.23;iPhoneX   ;lan1',
+  'D4:3D:7E:39:85:12;10.2.53.25;MS-20160302ECPY   ;lan1',
+  'D8:96:95:5A:51:87;10.2.53.26;iPhone-lrh-2   ;lan1',
+  '54:35:30:96:0C:A1;10.2.53.27;lirenhao-thinkp   ;lan1',
+  '68:EF:43:78:BC:F4;10.2.53.28;iPhone-87   ;lan1',
+  '88:28:B3:4A:DB:7B;10.2.53.29;PLK-AL10-f096f1   ;lan1',
+  '6C:5C:14:CB:B1:8B;10.2.53.30;android-f5c5c85   ;lan1',
+  '74:23:44:E9:B4:70;10.2.53.31;   ;lan1',
+  '5C:AD:CF:81:62:94;10.2.53.32;LGJ   ;lan1',
+  '00:23:24:88:81:BF;10.2.53.35;93EHB3HPE1S63GG   ;lan1',
+  '64:9A:BE:50:E1:C2;10.2.53.36;zhangqideiPhone   ;lan1',
+  '24:0A:64:96:10:B7;10.2.53.37;DESKTOP-KAOF0TD   ;lan1',
+  '04:95:73:DE:40:F4;10.2.53.40;anatta-PC   ;lan1',
+  '1C:5C:F2:29:24:78;10.2.53.41;Skde-iPhone   ;lan1',
+  'F0:FE:6B:67:10:4E;10.2.53.42;HF-LPB100   ;lan1',
+  '28:6C:07:AE:CB:A0;10.2.53.43;zhimi-airpurifi   ;lan1',
+  '78:02:F8:A3:AF:D1;10.2.53.46;MIX-gaoweishouj   ;lan1',
+  '20:AB:37:2B:06:7A;10.2.53.47;Cuitaos-iPhone   ;lan1',
+  '74:1B:B2:B2:BB:3A;10.2.53.48;li-iphone   ;lan1',
+  '78:4F:43:60:AC:84;10.2.53.49;taodeMBP   ;lan1',
+  '88:6A:B1:0D:FF:18;10.2.53.51;vivo_X7   ;lan1',
+  '90:FB:A6:05:A0:AC;10.2.53.52;SK2   ;lan1',
+  '44:37:E6:88:75:D6;10.2.53.53;XTZ-01708211036   ;lan1',
+  '78:4F:43:81:3E:DA;10.2.53.54;lihongyedeMBP   ;lan1',
+  '00:E0:4C:19:5C:BE;10.2.53.56;gaoweideMBP   ;lan1',
+  '1C:15:1F:24:82:8F;10.2.53.58;Honor_9   ;lan1',
+  '28:D2:44:DB:2A:BD;10.2.53.59;DESKTOP-IP86CN9   ;lan1',
+  'A8:5B:78:31:12:67;10.2.53.60;   ;lan1',
+  'F4:5C:89:A1:C0:35;10.2.53.61;zhubaobaodeMBP   ;lan1',
+  '38:D5:47:28:BA:BA;10.2.53.63;S4LMIFFS4UROGT5   ;lan1',
+  '54:14:73:B6:DA:DA;10.2.53.64;meilan-Note5   ;lan1',
+  '80:FA:5B:37:99:53;10.2.53.66;csj-T5   ;lan1',
+  '44:37:E6:88:75:49;10.2.53.68;dongjing   ;lan1',
+  '5C:9A:D8:E4:9F:B0;10.2.53.69;weichao-SH761   ;lan1',
+  '5C:A8:6A:DB:38:C9;10.2.53.70;HUAWEI_P9   ;lan1',
+  'F8:A9:63:52:FA:66;10.2.53.71;pq-PC   ;lan1',
+  'D8:1D:72:8F:92:CF;10.2.53.72;iPhone   ;lan1',
+  '9C:EB:E8:0F:F4:6B;10.2.53.73;DESKTOP-KNOJ0SA   ;lan1',
+  '60:F8:1D:0D:51:E6;10.2.53.74;weichaodeiPhone   ;lan1',
+  '68:F7:28:2B:6C:AD;10.2.53.77;zhangjian   ;lan1',
+  '58:44:98:E4:E9:65;10.2.53.78;MINOTEPro-xiaom   ;lan1',
+  '54:EE:75:C4:37:89;10.2.53.79;LAPTOP-J3699E7D   ;lan1',
+  '04:7D:7B:4A:CE:8A;10.2.53.80;ADI-PC   ;lan1',
+  'CC:08:8D:CC:9A:91;10.2.53.82;iPhone-miaomiao   ;lan1',
+  'E4:F8:9C:F6:5C:D4;10.2.53.83;PPT07-20151002W   ;lan1',
+  '00:21:CC:C3:2B:7C;10.2.53.84;DEEP-1703311516   ;lan1',
+  'E0:DB:55:C5:F6:A4;10.2.53.85;syk-PC   ;lan1',
+  '50:7B:9D:CF:32:08;10.2.53.86;Jock   ;lan1',
+  '0C:1D:AF:E9:18:67;10.2.53.87;android-8525daf   ;lan1',
+  '8C:89:A5:BD:46:C8;10.2.53.88;zhaoNanLeft-PC   ;lan1',
+  'E8:B2:AC:BA:85:AE;10.2.53.89;zhangleide-iPad   ;lan1',
+  '6C:8D:C1:EC:FE:16;10.2.53.91;yuki   ;lan1',
+  '00:0C:29:EF:5F:2E;10.2.53.93;ubuntu   ;lan1',
+  '64:A6:51:FB:97:73;10.2.53.94;PLK-UL00-8ab26a   ;lan1',
+  '44:37:E6:8A:DA:D9;10.2.53.96;LFOHUSF7RTQ9KA6   ;lan1',
+  '78:84:3C:AB:C4:FF;10.2.53.98;DGBQL5FQYT8KG9X   ;lan1',
+  '04:7D:7B:D6:A2:84;10.2.53.99;kefu01   ;lan1',
+  '6C:0B:84:3C:FB:B4;10.2.53.102;yada-pc   ;lan1',
+  'DC:2B:2A:1F:0C:C7;10.2.53.103;iPhone   ;lan1',
+  'F0:43:47:02:B1:9E;10.2.53.105;HUAWEI_P9   ;lan1',
+  '8C:89:A5:3F:F8:C3;10.2.53.107;PC-20150709RYYP   ;lan1',
+  'A4:BA:DB:A0:42:D7;10.2.53.108;loveme   ;lan1',
+  'C0:3F:D5:5B:53:09;10.2.53.109;XP40-20141029HC   ;lan1',
+  '8C:DC:D4:60:FF:3A;10.2.53.112;NPI60FF3A   ;lan1',
+  '7C:01:91:12:65:0F;10.2.53.113;boniude-iPhone   ;lan1',
+  '54:E1:AD:A8:FB:F1;10.2.53.118;LAPTOP-7M6DIAR7   ;lan1',
+  '04:7D:7B:B5:61:56;10.2.53.120;DADI-PC   ;lan1',
+  '5C:FF:35:08:0A:A4;10.2.53.122;XuPing-PC   ;lan1',
+  '28:F3:66:09:88:95;10.2.53.124;CRJ7ZJ63UT832UZ   ;lan1',
+  'CC:08:8D:32:20:B9;10.2.53.125;iPhone   ;lan1',
+  '60:67:20:EC:2B:2C;10.2.53.126;boboant-ThinkPa   ;lan1',
+  '50:68:0A:9C:21:97;10.2.53.130;ATH-AL00-9362b8   ;lan1',
+  'F4:31:C3:38:40:63;10.2.53.133;zhuomade-iPhone   ;lan1',
+  'DC:37:14:79:74:04;10.2.53.134;guohuifdeiPhone   ;lan1',
+  '38:63:BB:AF:81:EA;10.2.53.136;PC-20161020EUSP   ;lan1',
+  '28:56:5A:9E:E1:BD;10.2.53.137;张健   ;lan1',
+  'E4:E4:AB:5A:86:AC;10.2.53.138;panquandeiPhone   ;lan1',
+  '00:0E:C6:A1:F3:BB;10.2.53.139;LesondeMBP-2012   ;lan1',
+  'FC:F8:AE:EB:0B:90;10.2.53.140;syk-PC   ;lan1',
+  '4C:49:E3:53:6B:E0;10.2.53.141;MI6-xiaomishouj   ;lan1',
+  '34:E6:D7:3F:25:6A;10.2.53.147;SUN-PC   ;lan1',
+  'F0:7B:CB:9F:E6:F3;10.2.53.170;JPF-PC   ;lan1',
+  'C8:FF:28:DB:C3:39;10.2.53.184;zhoumiao-HP-346   ;lan1',
+  '1C:15:1F:92:1D:ED;10.2.53.193;Honor_9   ;lan1',
+  'B0:25:AA:22:FF:64;10.2.53.205;DESKTOP-56FUTNC   ;lan1'
+  );
+  parent.baklist=parent.totallist=dhcpd_client_list;
+  parent.sortlist=parent.baklist.concat(1);
+  parent.sortlist.pop();
+  
+  var checklist=new Array();
+  
+  
+  function show_dhcpd_client_list()
+  {
+    var maxrows=parent.document.getElementById("txtMaxRows").value;
+    var pageIndex=parent.document.getElementById("txtCurPageIndex").value;
+    var current_number=0;
+    var tmp;
+    count=dhcpd_client_list.length;
+    var m='';
+  
+    m = '<table id="disableclick" width=800 cellPadding=0 cellSpacing=1 style="BORDER: #c8ddf0 1px solid;" onclick=selectIt(dhcpd_client_list,event) >'
+    m += '<tr class=list_table_title >'+			
+    '<TD  width=30 align=center ><nobr>序号</nobr></TD>'+
+    '<TD  width=250 align=center title="点击排序" style="cursor:pointer" class='+parent.initclass[0]+' onclick="parent.sortFunc(1)"><nobr>MAC地址</nobr></TD>'+
+    '<TD  width=250 align=center title="点击排序" style="cursor:pointer" class='+parent.initclass[1]+' onclick="parent.sortFunc(2,ip_sort)"><nobr>IP地址</nobr></TD>'+
+    '<TD  width=270 align=center title="点击排序" style="cursor:pointer" class='+parent.initclass[2]+' onclick="parent.sortFunc(3)"><nobr>主机名</nobr></TD>'+
+    '</TR>';
+    for(;current_number < count;current_number++)
+    {
+      tmp=dhcpd_client_list[current_number];
+  
+      tt=tmp.split(';');
+                  if(current_number%2 == 0)
+          m+='<TR class=tb_tr_unblock title="单击选中"  id=mytable'+current_number+'>';
+      else
+          m+='<TR class=tb_tr_block title="单击选中" id=mytable'+current_number+'>';
+    
+        
+        
+      
+      m+='<TD width=30 align=center>'+(maxrows*(pageIndex-1)+current_number+1)+'</TD>';
+      m+='<TD width=250 align=center>'+tt[0]+'</TD>';
+      m+='<TD width=250 align=center>'+tt[1]+'</TD>';
+      m+='<TD width=270 align=center class=ellipsis_div onmouseover="if(this.innerText||this.textContent) this.title=this.innerText||this.textContent">'+tt[2]+'</TD>'; 
+      m+='</TR>';
+  
+    }
+    m += '<a name=line'+(count+1)+'></a></table>';
+    document.getElementById("dhcpd_client_listp").innerHTML = m;
+    parent.document.getElementById("dhcpd_client_frame").style.height=40+26*(current_number);
+  }
+  function init()
+  {
+    if (!parent.showflag)
+    {
+      parent.gopage();
+    }
+  }
+  
+  </script>
+  
+  </head>
+  
+  <STYLE type=text/css>
+  .ellipsis_div{   
+  overflow:hidden;   
+  text-overflow:ellipsis;   
+  white-space:nowrap;   
+  word-break:keep-all;
+  } 
+  </STYLE>
+  
+  <style type="text/css">
+  .fixedtd{
+      position:relative;
+    top: expression(this.parentElement.parentElement.parentElement.parentElement.scrollTop-1);
+    z-index:1;
+  }
+  </style>
+  
+  <body bgcolor=white topmargin="0" leftmargin="0" onload=init()>
+  <form name=frmsetup action='/goform/aspForm' method=post>
+  <table width=100% border=0 cellspacing=0>
+      <tr><td width=593 align=left colspan=3 valign=top>
+       <div id=dhcpd_client_listp style="overflow:static;"></div>
+     </tr>
+  </table>
+  </form>
+  </tr>
+  
+  </body>
+  </html>
+  
+  
+  
+  
+  
+  
+  

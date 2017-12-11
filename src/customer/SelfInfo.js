@@ -53,6 +53,7 @@ export default connect(state => state.selfInfo || defVal)(props => {
     <span key='cc'>本机链接个数: {props.connectionCount}</span><br />
     <span key='tcc'>TCP本机链接个数: {props.tcpConnectionCount}</span><br />
     <span key='ucc'>UDP总链接个数: {props.udpConnectCount}</span><br />
-    <span key='mac'>MAC: {props.mac}</span>
+    <span key='mac'>MAC: {props.mac}</span><br />
+    <span key='hn'>主机名: {props.hostName}</span>
   </div>
 })
