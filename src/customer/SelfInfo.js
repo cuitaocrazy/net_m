@@ -40,19 +40,17 @@ export default connect(state => state.selfInfo || defVal)(props => {
     }]
   })
   return <div>
-    <span key='td'>total download: {props.totalDownload}</span><br />
-    <span key='d'>download: {props.download}</span><br />
-    <span key='tds'>total down speed: {props.totalDownSpeed}K</span><br />
-    <span key='tus'>total up speed: {props.totalUpSpeed}K</span><br />
-    <span key='ds'>down speed: {props.downSpeed}K</span><br />
-    <span key='us'>up speed: {props.upSpeed}K</span><br />
-    <span key='tocc'>total connection count: {props.totalConnectionCount}</span><br />
-    <span key='ttcc'>total tcp connection count: {props.totalTcpConnectionCount}</span><br />
-    <span key='tucc'>total udp connection count: {props.totalUdpConnectCount}</span><br />
-    <span key='cc'>connection count: {props.connectionCount}</span><br />
-    <span key='tcc'>tcp connection count: {props.tcpConnectionCount}</span><br />
-    <span key='ucc'>udp connection count: {props.udpConnectCount}</span><br />
-    <Doughnut data={getCData(props.downSpeed, props.totalDownSpeed - props.downSpeed)} />
-    <Doughnut data={getCData(props.upSpeed, props.totalUpSpeed - props.upSpeed)} />
+    <span key='td'>总下载量: {props.totalDownload}</span><br />
+    <span key='d'>本机下载量: {props.download}</span><br />
+    <span key='tds'>总下载速率: {props.totalDownSpeed}K</span><br />
+    <span key='tus'>总上传速率: {props.totalUpSpeed}K</span><br />
+    <span key='ds'>本机下载速率: {props.downSpeed}K</span><br />
+    <span key='us'>本机上传速率: {props.upSpeed}K</span><br />
+    <span key='tocc'>总链接个数: {props.totalConnectionCount}</span><br />
+    <span key='ttcc'>TCP总链接个数: {props.totalTcpConnectionCount}</span><br />
+    <span key='tucc'>UDP总链接个数: {props.totalUdpConnectCount}</span><br />
+    <span key='cc'>本机链接个数: {props.connectionCount}</span><br />
+    <span key='tcc'>TCP本机链接个数: {props.tcpConnectionCount}</span><br />
+    <span key='ucc'>UDP总链接个数: {props.udpConnectCount}</span><br />
   </div>
 })
