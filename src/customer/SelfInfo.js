@@ -43,10 +43,10 @@ export default connect(state => state.selfInfo || defVal)(props => {
   return <div>
     <span key='td'>总下载量: {unitConvert(props.totalDownload)}</span><br />
     <span key='d'>本机下载量: {unitConvert(props.download)}</span><br />
-    <span key='tds'>总下载速率: {unitConvert(props.totalDownSpeed)}</span><br />
-    <span key='tus'>总上传速率: {unitConvert(props.totalUpSpeed)}</span><br />
-    <span key='ds'>本机下载速率: {unitConvert(props.downSpeed)}</span><br />
-    <span key='us'>本机上传速率: {unitConvert(props.upSpeed)}</span><br />
+    <span key='tds'>总下载速率: {unitConvert(props.totalDownSpeed * 1024)}</span><br />
+    <span key='tus'>总上传速率: {unitConvert(props.totalUpSpeed * 1024)}</span><br />
+    <span key='ds'>本机下载速率: {unitConvert(props.downSpeed * 1024)}</span><br />
+    <span key='us'>本机上传速率: {unitConvert(props.upSpeed * 1024)}</span><br />
     <span key='tocc'>总链接个数: {props.totalConnectionCount}</span><br />
     <span key='ttcc'>TCP总链接个数: {props.totalTcpConnectionCount}</span><br />
     <span key='tucc'>UDP总链接个数: {props.totalUdpConnectCount}</span><br />

@@ -1,7 +1,7 @@
 
 function _unitConvert(times, num) {
   if (num / 1024 < 1) {
-    return { num, times }
+    return { num: num.toFixed(2), times }
   } else {
     return _unitConvert(times + 1, num / 1024)
   }
