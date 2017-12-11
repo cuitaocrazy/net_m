@@ -4,8 +4,8 @@ import { Doughnut } from 'react-chartjs-2'
 import { unitConvert } from '../utils'
 
 const defVal = {
-  totalDownload: '0',
-  download: '0',
+  totalDownload: 0,
+  download: 0,
   totalDownloadNum: 0,
   downloadNum: 0,
   totalDownSpeed: 0,
