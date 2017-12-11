@@ -47,7 +47,7 @@ const reducer = createReducer({
     const findSelf = evt.find(ipInfo => ipInfo[0] === state.selfIp)
 
     if (findSelf) {
-      selfInfo.download = findSelf[1]
+      selfInfo.download = findSelf[2]
       selfInfo.downSpeed = findSelf[3]
       selfInfo.upSpeed = findSelf[4]
       selfInfo.connectionCount = findSelf[5]
