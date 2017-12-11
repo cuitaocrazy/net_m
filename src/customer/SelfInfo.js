@@ -40,7 +40,6 @@ export default connect(state => state.selfInfo || defVal)(props => {
       hoverBackgroundColor
     }]
   })
-  console.log(props)
   return <div>
     <span key='td'>总下载量: {unitConvert(props.totalDownload)}</span><br />
     <span key='d'>本机下载量: {unitConvert(props.download)}</span><br />
@@ -54,5 +53,6 @@ export default connect(state => state.selfInfo || defVal)(props => {
     <span key='cc'>本机链接个数: {props.connectionCount}</span><br />
     <span key='tcc'>TCP本机链接个数: {props.tcpConnectionCount}</span><br />
     <span key='ucc'>UDP总链接个数: {props.udpConnectCount}</span><br />
+    <span key='mac'>MAC: {props.mac}</span>
   </div>
 })

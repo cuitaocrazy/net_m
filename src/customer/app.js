@@ -16,7 +16,7 @@ const ConnectionCountTop = topCom('链接数TOP5', '链接数', 'connectionCount
 const TcpConnectionCountTop = topCom('TCP链接数TOP5', 'TCP链接数', 'tcpConnectionCountTop')
 const UdpConnectionCountTop = topCom('UDP链接数TOP5', 'UDP链接数', 'udpConnectionCountTop')
 
-const ls = socket('http://10.2.53.8:7070')
+const ls = socket('http://10.2.53.49:7070')
 
 ls.on('refresh', data => store.dispatch(newDataAct(data)))
 ls.on('ip', ip => store.dispatch(ipAct(ip.match(/(\d+\.\d+\.\d+\.\d+)/)[0])))
@@ -53,6 +53,7 @@ const reducer = createReducer({
       selfInfo.connectionCount = findSelf[5]
       selfInfo.tcpConnectionCount = findSelf[6]
       selfInfo.udpConnectCount = findSelf[7]
+      selfInfo.mac = findSelf[8]
     }
 
     selfInfo.totalDownload = getTotal(2)
@@ -63,8 +64,8 @@ const reducer = createReducer({
     selfInfo.totalUdpConnectionCount = getTotal(7)
 
     selfInfo.totalDownload = evt.reduce((total, e) => total + e[2], 0)
-    return state
-    // return { ...state, selfInfo, downloadTop: getTopData(2), downSpeedTop: getTopData(4), upSpeedTop: getTopData(3), connectionCountTop: getTopData(5), tcpConnectionCountTop: getTopData(6), udpConnectionCountTop: getTopData(7) }
+    // return state
+    return { ...state, selfInfo, downloadTop: getTopData(2), downSpeedTop: getTopData(4), upSpeedTop: getTopData(3), connectionCountTop: getTopData(5), tcpConnectionCountTop: getTopData(6), udpConnectionCountTop: getTopData(7) }
   },
   [ipAct]: (state, evt) => ({ ...state, selfIp: evt })
 }, { selfIp: '未连接', ipInfoList: [] })
