@@ -36,7 +36,7 @@ export default (title, countTitle, key, numFormat = num => num) => connect(state
           </tr>
         </thead>
         <tbody>
-          {props.tops.map((row, index) => <tr key={index}><td>{row.ip}</td><td>{numFormat(row.count)}</td></tr>)}
+          {props.tops.map((row, index) => <tr key={index}><td>{row.ip}<br /><small className='text-muted'>{row.mac}</small></td><td>{numFormat(row.count)}</td></tr>)}
         </tbody>
       </table>
       <Doughnut data={{

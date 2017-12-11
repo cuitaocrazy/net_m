@@ -29,13 +29,28 @@ async function work() {
       }
     })
     const text = await logRes.text()
-    const regex = /ip_stat\[\d+\]=(\[.*?\]);/g
     let result
+
+    const contentRegx = /var arp_list=new Array\(([\s\S]*?)\);/m
+    const content = text.match(contentRegx)[1]
+    
+    const ipMacRegx = /"(.*?);(.*?);/g
+    
+    const ipMacMap = {}
+    
+    while((result = ipMacRegx.exec(content)) != null) {
+      ipMacMap[result[1]] = result[2]
+    }
+
+    const ipInfoRegx = /ip_stat\[\d+\]=(\[.*?\]);/g
     const as = []
-    while((result = regex.exec(text)) != null) {
-      as.push(eval(result[1]))
+    while((result = ipInfoRegx.exec(text)) != null) {
+      const ipInfo = eval(result[1])
+      ipInfo.push(ipMacMap[ipInfo[0]] || '未知')
+      as.push(ipInfo)
     }
     evtEmt.emit('data', as)
+    console.log(as)
     
   }, 1000)
 }

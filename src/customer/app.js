@@ -31,7 +31,7 @@ const ipAct = createAction()
 const reducer = createReducer({
   [newDataAct]: (state, evt) => {
     function getTopData(index) {
-      const as = evt.map(row => ({ ip: row[0], count: row[index] })).sort((a, b) => b.count - a.count)
+      const as = evt.map(row => ({ ip: row[0], count: row[index], mac: row[8] })).sort((a, b) => b.count - a.count)
       return {
         tops: as.splice(0, 5),
         otherCount: as.splice(5).reduce((s, e) => s + e.count, 0)
