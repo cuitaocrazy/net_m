@@ -42,7 +42,7 @@ async function work() {
       ipMacMap[result[1]] = result[2]
     }
 
-    const ipInfoRegx = /ip_stat\[\d+\]=(\[.*?\]);/g
+    const ipInfoRegx = /[^/]ip_stat\[\d+\]=(\[.*?\]);/g
     const as = []
     while((result = ipInfoRegx.exec(text)) != null) {
       const ipInfo = eval(result[1])
