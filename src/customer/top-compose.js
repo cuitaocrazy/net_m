@@ -16,7 +16,7 @@ export default (title, countTitle, key, numFormat = num => num) => connect(state
     '#a06b72',
     '#a17903',
     '#989914',
-    '##82a362',
+    '#82a362',
     '#006a9f'
   ]
 
