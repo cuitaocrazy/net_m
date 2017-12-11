@@ -4,10 +4,10 @@ import { Doughnut } from 'react-chartjs-2'
 
 export default (title, countTitle, key, numFormat = num => num) => connect(state => state[key] || {tops:[], otherCount: 0})(props => {
   const backgroundColor = [
-    '#ff0000',
-    '#ff00cc',
-    '#ff9d02',
-    '#ffff01',
+    '#eb4435',
+    '#fba7b3',
+    '#fcbd05',
+    '#eef020',
     '#ccff99',
     '#00a6f9'
   ]
