@@ -50,7 +50,7 @@ app.get('/test', (req, res) => {
   res.send(routeData)
 })
 
-app.use(express.static('./'))
+app.use(express.static('./dist'))
 
 io.on('connection', socket => {
   socket.emit('ip', socket.handshake.address)
