@@ -16,6 +16,7 @@ async function login() {
 
   const regex = /^var\ssessionid=\"([a-z0-9]+)\";$/m
 
+  console.log(body)
   return body.match(regex)[1]
 }
 
@@ -52,7 +53,7 @@ async function work() {
       }
       evtEmt.emit('data', as)
     } catch (e) {
-      console.log(e)
+      console.error(e)
     }
   }, 1000)
 }
