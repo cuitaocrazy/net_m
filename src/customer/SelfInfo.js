@@ -49,7 +49,7 @@ export default connect(state => state.selfInfo || defVal)(props => {
     <span key='us'>本机上传速率: {unitConvert(props.upSpeed * 1024)}</span><br />
     <span key='tocc'>总链接个数: {props.totalConnectionCount}</span><br />
     <span key='ttcc'>TCP总链接个数: {props.totalTcpConnectionCount}</span><br />
-    <span key='tucc'>UDP总链接个数: {props.totalUdpConnectCount}</span><br />
+    <span key='tucc'>UDP总链接个数: {props.totalUdpConnectionCount}</span><br />
     <span key='cc'>本机链接个数: {props.connectionCount}</span><br />
     <span key='tcc'>TCP本机链接个数: {props.tcpConnectionCount}</span><br />
     <span key='ucc'>UDP总链接个数: {props.udpConnectCount}</span><br />
