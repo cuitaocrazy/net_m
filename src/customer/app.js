@@ -75,36 +75,32 @@ const store = createStore(reducer)
 
 const App = connect(state => state, { newDataAct })(function (props) {
   return <div className='container'>
-    <h1>ip: {props.selfIp}</h1>
+    <h1>{props.selfIp}</h1>
     <div className='row'>
       <div className='col-sm'>
         <SelfInfo />
       </div>
+    </div>
+    <div className='row'>
       <div className='col-sm'>
         <DownloadTop />
       </div>
       <div className='col-sm'>
         <DownSpeedTop />
       </div>
-    </div>
-    <div className='row'>
       <div className='col-sm'>
         <UpSpeedTop />
       </div>
+    </div>
+    <div className='row'>
       <div className='col-sm'>
         <ConnectionCountTop />
       </div>
       <div className='col-sm'>
         <TcpConnectionCountTop />
       </div>
-    </div>
-    <div className='row'>
       <div className='col-sm'>
         <UdpConnectionCountTop />
-      </div>
-      <div className='col-sm'>
-      </div>
-      <div className='col-sm'>
       </div>
     </div>
   </div>
