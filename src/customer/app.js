@@ -16,7 +16,7 @@ const ConnectionCountTop = topCom('链接数TOP5', '链接数', 'connectionCount
 const TcpConnectionCountTop = topCom('TCP链接数TOP5', 'TCP链接数', 'tcpConnectionCountTop')
 const UdpConnectionCountTop = topCom('UDP链接数TOP5', 'UDP链接数', 'udpConnectionCountTop')
 
-const ls = socket('http://10.2.53.49:7070')
+const ls = socket('http://10.2.53.8:7070')
 
 ls.on('refresh', data => store.dispatch(newDataAct(data)))
 ls.on('ip', ip => store.dispatch(ipAct(ip.match(/(\d+\.\d+\.\d+\.\d+)/)[0])))
